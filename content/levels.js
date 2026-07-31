@@ -1,0 +1,5 @@
+window.KZ_LEVELS = {
+  1:{nameSw:'Msingi wa Kodi',subtitle:'Anza na misingi ya uelewa wa kodi.',theme:'Kijiji & soko',baseTime:30,chainDuration:30,letterSpeed:1,wrongAnswerPenalty:2,maxLives:3,passingScore:700,stages:{easy:{label:'A · Rahisi',time:30,count:4},medium:{label:'B · Kati',time:30,count:4},challenge:{label:'C · Changamoto',time:30,count:4}}},
+  2:{nameSw:'Biashara na Uwajibikaji',subtitle:'Jenga ujasiri wa biashara inayowajibika.',theme:'Mji unaokua',baseTime:21,letterSpeed:1,wrongAnswerPenalty:3,maxLives:3,passingScore:900,stages:{easy:{label:'A · Rahisi',time:21,count:4},medium:{label:'B · Kati',time:19,count:4},challenge:{label:'C · Changamoto',time:17,count:4}}},
+  3:{nameSw:'Bingwa wa Kodi',subtitle:'Fikia upeo wa maarifa ya kodi.',theme:'Mji wa kidijitali',baseTime:17,letterSpeed:1.25,wrongAnswerPenalty:4,maxLives:2,passingScore:1100,stages:{easy:{label:'A · Rahisi',time:17,count:4},medium:{label:'B · Kati',time:15,count:4},challenge:{label:'C · Changamoto',time:13,count:4}}}
+};

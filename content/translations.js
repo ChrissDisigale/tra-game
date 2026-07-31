@@ -1,0 +1,1 @@
+window.KZ_COPY = {sw:{correct:'Hongera!',wrong:'Herufi hiyo haifuati kwa sasa. Jaribu nyingine.',dragon:'Joka Kodi amemeza herufi zako. Jaribu tena kabla muda haujaisha!',encourage:'Jaribu tena na uboreshe alama zako.'},en:{correct:'Congratulations!',wrong:'That letter is not next. Try another one.',dragon:'Joka Kodi swallowed the letters. Try again!'}};
