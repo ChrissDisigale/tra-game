@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#073B6F">
-  <meta name="description" content="KodiZuma Tanzania — Chagua Herufi, Jibu Swali, Jenga Taifa.">
-  <title>KodiZuma Tanzania</title>
+  <meta name="description" content="KodiQuest Tanzania — Chagua Herufi, Jibu Swali, Jenga Taifa.">
+  <title>KodiQuest Tanzania</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <div id="app" class="app-shell">
     <section id="loading-screen" class="app-screen active" aria-hidden="false">
       <div class="loading-orbit"><span>T</span><span>A</span><span>X</span></div>
-      <div class="brand-mark"><span class="brand-k">K</span><span>odi</span><strong>Zuma</strong></div>
+      <div class="brand-mark"><span class="brand-k">K</span><span>odi</span><strong>Quest</strong></div>
       <p class="eyebrow">TANZANIA • ELIMU • UBUNIFU</p>
       <div class="dragon dragon-loading" aria-label="Joka Kodi"></div>
       <div class="progress-track"><span id="loading-progress"></span></div>
@@ -27,7 +27,7 @@
         <div class="welcome-art" aria-hidden="true"><span class="sun"></span><span class="cloud cloud-a"></span><span class="cloud cloud-b"></span><span class="hill hill-a"></span><span class="hill hill-b"></span><span class="cityline"></span></div>
         <div class="screen-pad welcome-content">
           <div class="topline"><span class="mini-pill">JIFUNZE KWA KUCHEZA</span><button class="icon-button" data-action="toggle-sound" aria-label="Washa au zima sauti">♫</button></div>
-          <div class="brand-block"><div class="brand-mark large"><span class="brand-k">K</span><span>odi</span><strong>Zuma</strong></div><p class="tagline">Chagua Herufi, Jibu Swali,<br><b>Jenga Taifa.</b></p></div>
+          <div class="brand-block"><div class="brand-mark large"><span class="brand-k">K</span><span>odi</span><strong>Quest</strong></div><p class="tagline">Chagua Herufi, Jibu Swali,<br><b>Jenga Taifa.</b></p></div>
           <div class="welcome-dragon-wrap"><div class="dragon" aria-label="Joka Kodi, rafiki yako wa mchezo"></div><span class="speech-bubble">Tayari kujenga taifa?</span></div>
           <div class="welcome-actions">
             <button class="primary-button" data-action="start"><span>▶</span> Anza Mchezo</button>
@@ -64,7 +64,7 @@
       <section id="content-admin-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="settings">‹ Mipangilio</button><div class="section-heading"><span class="mini-pill">PROTOTYPE CONTENT MANAGEMENT</span><h1>Simamia somo</h1><p>Hifadhi mabadiliko ya mfano kwenye LocalStorage. Huu si mfumo wa uzalishaji.</p></div><label class="profile-form">Chagua somo<select id="admin-lesson-select"></select></label><div id="admin-lesson-editor" class="lesson-summary-card"></div></div></section>
       <section id="settings-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="map">‹ Rudi</button><div class="section-heading"><span class="mini-pill">MAPENDEKEZO</span><h1>Mipangilio</h1></div><div class="settings-list"><label class="setting-row"><span><b>Sauti</b><small>Matukio ya sauti ya mchezo</small></span><input id="sound-setting" type="checkbox"><i></i></label><label class="setting-row"><span><b>Hali ya mwendo mdogo</b><small>Punguza animation kwa urahisi</small></span><input id="motion-setting" type="checkbox"><i></i></label><label class="setting-row"><span><b>Hali ya data kidogo</b><small>Epuka media za ziada</small></span><input id="data-setting" type="checkbox"><i></i></label></div><button class="danger-button" data-action="reset">Futa maendeleo</button><div class="about-link"><button class="ghost-button" data-action="about">Kuhusu Wazo →</button><button class="ghost-button" data-action="review-bank">Question Bank Review →</button><button class="ghost-button" data-action="analytics">Demo Analytics →</button><button class="ghost-button" data-action="content-admin">Prototype Content Management →</button></div></div></section>
       <section id="question-bank-review-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="settings">‹ Mipangilio</button><div class="section-heading"><span class="mini-pill">ADMIN REVIEW</span><h1>Question Bank Review</h1><p id="bank-summary">All playable tax questions are linked to an official source.</p></div><div class="filter-row"><button class="filter active" data-review-filter="all">All</button><button class="filter" data-review-filter="verified">Verified</button><button class="filter" data-review-filter="level-1">Level 1</button><button class="filter" data-review-filter="level-2">Level 2</button><button class="filter" data-review-filter="level-3">Level 3</button></div><div id="question-review-list" class="library-list"></div></div></section>
-      <section id="about-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="welcome">‹ Rudi</button><div class="section-heading"><span class="mini-pill">KWA TAARIFA</span><h1>Kuhusu Wazo</h1><p>KodiZuma Tanzania ni daraja kati ya elimu, mchezo na maendeleo.</p></div><div class="about-cards"><article><b>Changamoto</b><p>Tax terminology inaweza kuwa ngumu kukumbuka bila mazoezi ya kila siku.</p></article><article><b>Ubunifu</b><p>Herufi zinazosafiri zinageuza kujifunza kuwa maamuzi ya haraka na yenye furaha.</p></article><article><b>Thamani</b><p>TRA hupata njia ya kuwafikia wanafunzi, wajasiriamali na familia kwa lugha rahisi.</p></article><article><b>Uwezekano</b><p>Inaweza kukua kuwa programu ya shule, kampeni za elimu na huduma za kidijitali.</p></article></div><p class="disclaimer">Maudhui haya ni kwa madhumuni ya elimu ndani ya mchezo. Sheria, viwango, masharti na mifumo vinaweza kubadilika. Tumia vyanzo rasmi vya TRA kuthibitisha taarifa za sasa.</p></div></section>
+      <section id="about-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="welcome">‹ Rudi</button><div class="section-heading"><span class="mini-pill">KWA TAARIFA</span><h1>Kuhusu Wazo</h1><p>KodiQuest Tanzania ni daraja kati ya elimu, mchezo na maendeleo.</p></div><div class="about-cards"><article><b>Changamoto</b><p>Tax terminology inaweza kuwa ngumu kukumbuka bila mazoezi ya kila siku.</p></article><article><b>Ubunifu</b><p>Herufi zinazosafiri zinageuza kujifunza kuwa maamuzi ya haraka na yenye furaha.</p></article><article><b>Thamani</b><p>TRA hupata njia ya kuwafikia wanafunzi, wajasiriamali na familia kwa lugha rahisi.</p></article><article><b>Uwezekano</b><p>Inaweza kukua kuwa programu ya shule, kampeni za elimu na huduma za kidijitali.</p></article></div><p class="disclaimer">Maudhui haya ni kwa madhumuni ya elimu ndani ya mchezo. Sheria, viwango, masharti na mifumo vinaweza kubadilika. Tumia vyanzo rasmi vya TRA kuthibitisha taarifa za sasa.</p></div></section>
     </main>
     <div id="toast" class="toast" role="status"></div>
   </div>

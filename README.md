@@ -1,6 +1,6 @@
-# KodiZuma Tanzania
+# KodiQuest Tanzania
 
-KodiZuma Tanzania is a mobile-first HTML5 educational game prototype for TRA tax education. Its tagline is **Chagua Herufi, Jibu Swali, Jenga Taifa.** Players answer short tax questions by tapping moving letters in order before the chain reaches the original character Joka Kodi.
+KodiQuest Tanzania is a mobile-first HTML5 educational game prototype for TRA tax education. Its tagline is **Chagua Herufi, Jibu Swali, Jenga Taifa.** Players answer short tax questions by tapping moving letters in order before the chain reaches the original character Joka Kodi.
 
 ## Run it
 
@@ -56,7 +56,7 @@ For multiple choice, use `type: 'multiple-choice'` and add `options: ['A','B','C
 
 ## LocalStorage
 
-The game stores one JSON object under `kodizuma-tanzania-state-v1`. It includes player profile, unlocked levels, score, XP, progress, achievements, reviewed concepts, settings, and current gameplay values. The Settings screen can reset saved progress.
+The game stores one JSON object under `kodiquest-tanzania-state-v1`. It includes player profile, unlocked levels, score, XP, progress, achievements, reviewed concepts, settings, and current gameplay values. The Settings screen can reset saved progress.
 
 ## Supported browsers
 
@@ -80,7 +80,7 @@ Lessons have a concise **Muhtasari** mode and a section-based **Somo Kamili** mo
 
 Maktaba content is separated into `content/lessons.js`, `content/lesson-categories.js`, `content/glossary.js` and `content/official-sources.js`. To add a lesson, add a data row to `lessonData` with a verified source key, then choose or extend an animation key in `lessonAnimation`. Every active lesson is validated before rendering and must have a verified official source.
 
-Learning state is stored under `kodiZumaLearningState`, including lesson progress, bookmarks, quiz scores, XP, streak, recent lessons, wrong-topic recommendations and official-source clicks. Content that may change by financial year is marked for annual review.
+Learning state is stored under `kodiQuestLearningState`, including lesson progress, bookmarks, quiz scores, XP, streak, recent lessons, wrong-topic recommendations and official-source clicks. Content that may change by financial year is marked for annual review.
 
 ## Disclaimer
 
@@ -94,8 +94,16 @@ This presentation prototype uses CSS/emoji character details, generated Web Audi
 
 The new `tax-benefits-screen` is an interactive learning section rather than a static information page. It includes 12 development categories, summary and comprehensive modes, category scenarios, a 20-question scenario bank, a before/after community comparison, a seven-step public-revenue timeline, official TRA source links, and a friendly Joka Kodi guide.
 
-Development Points are game-only learning points stored under `kodiZumaTaxBenefitsState`. They can be earned for summaries, quizzes, comprehensive lessons and level completion, then contributed to eight illustrative community projects. Project visuals change through five stages (0%, 25%, 50%, 75%, 100%); they are educational visualisations and are not government expenditure records.
+Development Points are game-only learning points stored under `kodiQuestTaxBenefitsState`. They can be earned for summaries, quizzes, comprehensive lessons and level completion, then contributed to eight illustrative community projects. Project visuals change through five stages (0%, 25%, 50%, 75%, 100%); they are educational visualisations and are not government expenditure records.
 
 Educational wording deliberately describes collective public revenue and official budgeting processes. The section never claims that one person’s exact tax payment funded one named school, road, hospital or other project. Source links are kept in `content/tax-benefits.js`; add a category to `taxBenefitCategories`, a project to `communityProjects`, and scenarios to `taxBenefitScenarios`. Keep every new claim cautious, source-backed and free of unverified rates, deadlines or penalties.
 
 The state also stores explored categories, completed summaries, completed quizzes, project progress and unlocked badges. Reduced-motion users keep all content and interactions while continuous particle-style motion is minimised. The community scene uses lightweight emoji/CSS visuals for this prototype; production work should replace them with TRA-reviewed illustrated assets and usability-tested animations.
+
+## User manual
+
+The complete Swahili user manual is available as `KodiQuest-Tanzania-User-Manual.pdf`. Its editable source is `USER_MANUAL.md`, and the PDF can be regenerated with:
+
+```bash
+swift -module-cache-path /tmp/kz-swift-cache tools/generate-user-manual.swift
+```
