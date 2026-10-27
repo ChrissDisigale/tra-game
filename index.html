@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="library.css"><link rel="stylesheet" href="tax-benefits.css"><link rel="stylesheet" href="tax-benefits-fix.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="library.css?v=20261027-lesson-layout">
+  <link rel="stylesheet" href="tax-benefits.css">
+  <link rel="stylesheet" href="tax-benefits-fix.css">
 </head>
 <body>
   <div id="app" class="app-shell">
@@ -57,9 +60,151 @@
       <section id="achievements-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="map">‹ Ramani</button><div class="section-heading"><span class="mini-pill">MALENGO YAKO</span><h1>Mafanikio</h1><p>Usikose nafasi ya kuendelea kujifunza.</p></div><div id="achievement-list" class="achievement-list"></div></div></section>
       <section id="leaderboard-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="map">‹ Ramani</button><div class="section-heading"><span class="mini-pill">DEMO DATA</span><h1>Ubao wa alama</h1><p>Shindana kwa moyo wa kujifunza — si kwa presha.</p></div><div class="filter-row"><button class="filter active">Taifa</button><button class="filter">Mkoa</button><button class="filter">Level 1</button><button class="filter">Wiki</button></div><div id="leaderboard-list" class="leaderboard-list"></div></div></section>
       <section id="tax-benefits-screen" class="app-screen tax-benefits-screen" aria-hidden="true"><div class="tax-benefits-shell"><header class="tax-benefits-header"><button class="back-button" data-action="map">‹ Rudi</button><div><span class="mini-pill">FAIDA ZA KODI</span><h1>Kodi Inajenga Taifa</h1><p>Fahamu jinsi mapato ya pamoja yanavyosaidia huduma na maendeleo ya jamii.</p></div><div class="tax-benefits-header-actions"><span id="development-points-counter" class="points-counter">✦ 0</span><button class="icon-button" data-action="toggle-sound" aria-label="Sauti">♫</button><button class="icon-button" data-action="tax-benefits-info" aria-label="Taarifa">i</button></div></header><div id="tax-benefits-content"></div></div></section>
-      <section id="learning-library-screen" class="app-screen" aria-hidden="true"><div class="library-shell"><header class="library-header"><button class="back-button" data-action="map">‹ Ramani</button><div><span class="mini-pill">JIFUNZE ZAIDI</span><h1>Maktaba ya Kodi</h1><p>Jifunze kwa muhtasari au kwa undani.</p></div><div class="library-header-actions"><button class="icon-button" data-action="library-search" aria-label="Tafuta masomo">⌕</button><button class="icon-button" data-action="library-bookmarks" aria-label="Masomo yaliyohifadhiwa">🔖</button></div></header><div class="library-hero"><div class="book-animation" aria-label="Kitabu kinachofunguka">📖</div><div><span class="mini-pill">JOKA KODI ANASEMA</span><p>Karibu Maktaba ya Kodi. Chagua somo, jifunze kwa urahisi na ujaribu changamoto.</p><div class="hero-actions"><button class="primary-button" data-action="continue-learning">Endelea Kujifunza</button><button class="secondary-button" data-action="discover-lessons">Gundua Masomo</button></div></div></div><div id="learning-stats" class="learning-stats"></div><div id="continue-learning-card" class="continue-learning-card"></div><div class="library-search-wrap"><span>⌕</span><input id="library-search-input" type="search" placeholder="Tafuta TIN, VAT, risiti, PAYE…" aria-label="Tafuta somo"><button id="clear-library-search" data-action="clear-library-search" aria-label="Futa utafutaji">×</button></div><div class="library-section-title"><div><span class="mini-pill">CHAGUA NJIA</span><h2>Masomo kwa mada</h2></div><button class="text-button" data-action="glossary">Kamusi →</button></div><div id="lesson-categories" class="lesson-categories" role="tablist"></div><div id="recommended-lessons" class="recommended-lessons"></div><div class="library-section-title"><div><span class="mini-pill">MTAALA WAKO</span><h2>Masomo yote</h2></div><span id="lesson-count" class="lesson-count"></span></div><div class="library-filter-row"><button class="filter active" data-lesson-filter="all">Yote</button><button class="filter" data-lesson-filter="beginner">Mwanzo</button><button class="filter" data-lesson-filter="intermediate">Kati</button><button class="filter" data-lesson-filter="advanced">Juu</button><button class="filter" data-lesson-filter="completed">Yamekamilika</button><button class="filter" data-lesson-filter="bookmarked">Yaliyohifadhiwa</button></div><div id="library-list" class="library-grid"></div><div id="library-empty" class="library-empty hidden">Hatukupata somo hilo. Jaribu kutumia neno fupi kama TIN, VAT, risiti au PAYE.</div><p class="disclaimer">Maudhui haya ni kwa madhumuni ya elimu ndani ya mchezo. Sheria, viwango, masharti na mifumo vinaweza kubadilika. Tumia vyanzo rasmi vya TRA kuthibitisha taarifa za sasa.</p></div></section>
-      <section id="lesson-detail-screen" class="app-screen" aria-hidden="true"><div class="lesson-detail-shell"><header class="lesson-sticky-header"><button class="back-button" data-action="library">‹ Maktaba</button><div id="lesson-detail-title" class="lesson-sticky-title"></div><button id="lesson-bookmark-button" class="icon-button" data-action="bookmark-lesson" aria-label="Hifadhi somo">🔖</button></header><div id="lesson-detail-content" class="lesson-detail-content"></div><div class="lesson-bottom-bar"><button data-action="previous-section">‹</button><button data-action="next-section">Endelea →</button><button data-action="start-lesson-quiz">Quiz</button><button data-action="lesson-source">Chanzo</button></div></div></section>
-      <section id="glossary-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="library">‹ Maktaba</button><div class="section-heading"><span class="mini-pill">KAMUSI</span><h1>Maneno ya Kodi</h1><p>Maana fupi, mfano na somo linalohusiana.</p></div><div class="library-search-wrap"><span>⌕</span><input id="glossary-search" type="search" placeholder="Tafuta neno…" aria-label="Tafuta neno la kamusi"></div><div id="glossary-list" class="glossary-grid"></div></div></section>
+      <section id="learning-library-screen" class="app-screen" aria-hidden="true">
+        <div class="library-shell">
+          <nav class="library-nav" aria-label="Urambazaji wa Maktaba">
+            <button class="back-button" data-action="map">‹ Ramani</button>
+            <div class="library-nav-actions">
+              <button class="library-nav-button" data-action="glossary">📘 <span>Kamusi</span></button>
+              <button class="library-nav-button" data-action="library-bookmarks" aria-label="Masomo yaliyohifadhiwa">🔖 <span>Yaliyohifadhiwa</span></button>
+            </div>
+          </nav>
+
+          <header class="library-hero">
+            <div class="library-hero-copy">
+              <span class="library-eyebrow">JIFUNZE ZAIDI</span>
+              <h1>Maktaba ya Kodi</h1>
+              <p>Jifunze masuala ya kodi kwa urahisi, hatua kwa hatua, na ujenge uelewa wako wa masuala ya fedha na biashara.</p>
+              <div class="hero-actions">
+                <button class="primary-button" data-action="continue-learning">Endelea Kujifunza <span aria-hidden="true">→</span></button>
+                <button class="secondary-button" data-action="discover-lessons">Gundua Masomo</button>
+              </div>
+            </div>
+            <div class="library-hero-art" aria-hidden="true">
+              <span class="hero-float hero-float-xp">+10 XP</span>
+              <span class="hero-float hero-float-check">✓</span>
+              <div class="hero-book"><span>📘</span><small>KODI<br>KWA URAHISI</small></div>
+              <img src="assets/illustrations/joka-kodi.svg" alt="">
+            </div>
+          </header>
+
+          <section class="library-block stats-block" aria-labelledby="learning-overview-title">
+            <div class="visually-hidden" id="learning-overview-title">Muhtasari wa maendeleo yako</div>
+            <div id="learning-stats" class="learning-stats"></div>
+          </section>
+
+          <section class="library-block continue-section" aria-labelledby="continue-title">
+            <div class="library-section-title">
+              <div><span class="section-kicker">SAFARI YAKO</span><h2 id="continue-title">Endelea Kujifunza</h2><p>Endelea pale ulipoishia na ukamilishe safari yako ya kujifunza.</p></div>
+            </div>
+            <div id="continue-learning-card" class="continue-learning-card"></div>
+          </section>
+
+          <section class="library-block topics-section" id="discover-lessons" aria-labelledby="topics-title">
+            <div class="library-section-title">
+              <div><span class="section-kicker">CHAGUA NJIA</span><h2 id="topics-title">Masomo kwa Mada</h2><p>Chagua mada inayokuvutia na uanze kujifunza.</p></div>
+              <button class="text-button" data-action="glossary">Fungua Kamusi <span aria-hidden="true">→</span></button>
+            </div>
+            <div id="lesson-categories" class="lesson-categories" role="tablist" aria-label="Mada za masomo"></div>
+          </section>
+
+          <section class="library-block library-resources" aria-labelledby="resources-title">
+            <div class="library-section-title">
+              <div><span class="section-kicker">KITABU CHA KUJIFUNZIA</span><h2 id="resources-title">Nyaraka za Maktaba</h2><p>Soma nyaraka za elimu moja kwa moja bila kuondoka kwenye Maktaba.</p></div>
+            </div>
+            <article class="document-card">
+              <div class="document-cover" aria-hidden="true"><span>TRA</span><strong>ELIMU<br>YA KODI</strong><small>MWONGOZO</small></div>
+              <div class="document-details">
+                <div class="document-badges"><span>PDF</span><span>2.2 MB</span><span>English</span></div>
+                <h3>TRA Tax Education Visual Booklet</h3>
+                <p>Fungua mwongozo huu wa picha ili kujifunza dhana muhimu za kodi kwa mtiririko rahisi na unaoeleweka.</p>
+                <div class="document-actions">
+                  <button class="document-view-button" data-action="open-tax-booklet"><span aria-hidden="true">📖</span> Soma Kitabu</button>
+                  <a href="assets/documents/TRA_Tax_Education_Clean_Visual_Booklet.pdf" target="_blank" rel="noopener noreferrer">Fungua kwenye tab mpya ↗</a>
+                </div>
+              </div>
+              <div class="document-decoration" aria-hidden="true">Aa</div>
+            </article>
+          </section>
+
+          <section id="recommended-lessons" class="library-block recommended-lessons" aria-label="Masomo maalum"></section>
+
+          <section class="library-block all-lessons-section" id="all-lessons" aria-labelledby="all-lessons-title">
+            <div class="library-section-title lessons-heading">
+              <div><span class="section-kicker">MTAALA WAKO</span><h2 id="all-lessons-title">Masomo Yote</h2><p>Gundua maktaba kamili ya maarifa ya kodi, biashara na fedha.</p></div>
+              <span id="lesson-count" class="lesson-count" aria-live="polite"></span>
+            </div>
+
+            <div class="lesson-toolbar" role="search">
+              <label class="library-search-wrap" for="library-search-input">
+                <span aria-hidden="true">⌕</span>
+                <input id="library-search-input" type="search" placeholder="Tafuta TIN, VAT, risiti, kodi..." autocomplete="off">
+                <button id="clear-library-search" data-action="clear-library-search" type="button" aria-label="Futa utafutaji">×</button>
+              </label>
+              <label class="toolbar-field"><span>Mada</span><select id="library-category-select" aria-label="Chuja kwa mada"></select></label>
+              <label class="toolbar-field"><span>Panga</span><select id="library-sort-select" aria-label="Panga masomo"><option value="recommended">Yaliyopendekezwa</option><option value="title">Jina A–Z</option><option value="shortest">Muda mfupi</option><option value="xp">XP nyingi</option></select></label>
+              <button class="clear-filters-button" data-action="clear-library-filters" type="button">↺ Futa vichujio</button>
+            </div>
+
+            <div class="library-filter-row" role="tablist" aria-label="Kiwango na hali ya somo">
+              <button class="filter active" data-lesson-filter="all" role="tab">Yote</button>
+              <button class="filter" data-lesson-filter="beginner" role="tab">Mwanzo</button>
+              <button class="filter" data-lesson-filter="intermediate" role="tab">Kati</button>
+              <button class="filter" data-lesson-filter="advanced" role="tab">Juu</button>
+              <button class="filter" data-lesson-filter="completed" role="tab">Yamekamilika</button>
+              <button class="filter" data-lesson-filter="bookmarked" role="tab">Yaliyohifadhiwa</button>
+            </div>
+
+            <div id="library-list" class="library-grid"></div>
+            <div id="library-empty" class="library-empty hidden"><span>🔎</span><h3>Hakuna somo lililopatikana</h3><p>Jaribu neno fupi kama TIN, VAT, risiti au PAYE, au futa vichujio.</p><button data-action="clear-library-filters">Futa vichujio</button></div>
+            <div class="library-pagination"><button id="library-load-more" class="load-more-button hidden" data-action="load-more-lessons">Onyesha Masomo Zaidi <span aria-hidden="true">↓</span></button></div>
+          </section>
+
+          <p class="disclaimer library-disclaimer">Maudhui haya ni kwa madhumuni ya elimu ndani ya mchezo. Sheria, viwango, masharti na mifumo vinaweza kubadilika. Tumia vyanzo rasmi vya TRA kuthibitisha taarifa za sasa.</p>
+        </div>
+        <dialog id="tax-booklet-dialog" class="document-viewer" aria-labelledby="tax-booklet-title">
+          <div class="document-viewer-shell">
+            <header class="document-viewer-header">
+              <div><span class="document-viewer-icon" aria-hidden="true">📘</span><div><strong id="tax-booklet-title">TRA Tax Education Visual Booklet</strong><small>Kitabu cha elimu ya kodi · PDF</small></div></div>
+              <nav aria-label="Vitendo vya hati">
+                <a href="assets/documents/TRA_Tax_Education_Clean_Visual_Booklet.pdf" target="_blank" rel="noopener noreferrer">Tab mpya ↗</a>
+                <a href="assets/documents/TRA_Tax_Education_Clean_Visual_Booklet.pdf" download>Pakua ↓</a>
+                <button data-action="close-tax-booklet" aria-label="Funga kitabu">×</button>
+              </nav>
+            </header>
+            <div class="document-viewer-body">
+              <iframe id="tax-booklet-frame" title="TRA Tax Education Visual Booklet PDF" data-src="assets/documents/TRA_Tax_Education_Clean_Visual_Booklet.pdf#view=FitH" loading="lazy"></iframe>
+              <div class="document-viewer-fallback"><p>Ikiwa kitabu hakionekani kwenye kifaa chako, kifungue kwenye tab mpya.</p><a href="assets/documents/TRA_Tax_Education_Clean_Visual_Booklet.pdf" target="_blank" rel="noopener noreferrer">Fungua PDF ↗</a></div>
+            </div>
+          </div>
+        </dialog>
+      </section>
+      <section id="lesson-detail-screen" class="app-screen" aria-hidden="true"><div class="lesson-detail-shell"><header class="lesson-top-nav"><button class="back-button" data-action="library">‹ Maktaba</button><div><span class="lesson-top-mark">📘</span><span id="lesson-detail-title" class="lesson-sticky-title"></span></div></header><main id="lesson-detail-content" class="lesson-detail-content"></main></div></section>
+      <section id="glossary-screen" class="app-screen" aria-hidden="true">
+        <div class="glossary-shell">
+          <nav class="glossary-nav" aria-label="Urambazaji wa Kamusi"><button class="back-button" data-action="library">‹ Maktaba</button><span>Kamusi ya KodiSmart</span></nav>
+          <header class="glossary-hero">
+            <div class="glossary-hero-copy"><span class="glossary-eyebrow">KAMUSI</span><h1>Maneno ya Kodi</h1><p>Fahamu maana ya maneno muhimu ya kodi kwa maelezo rahisi, mifano halisi na masomo yanayohusiana.</p></div>
+            <div class="glossary-hero-art" aria-hidden="true"><div class="glossary-book"><span>A–Z</span><strong>KAMUSI<br>YA KODI</strong></div><span class="glossary-float term-one">TIN</span><span class="glossary-float term-two">VAT</span><span class="glossary-float term-three">PAYE</span></div>
+          </header>
+
+          <section class="glossary-search-section" aria-labelledby="glossary-search-title">
+            <div class="glossary-search-heading"><div><span class="glossary-kicker">TAFUTA KWA HARAKA</span><h2 id="glossary-search-title">Unatafuta neno gani?</h2></div><span id="glossary-result-count" class="glossary-result-count" aria-live="polite"></span></div>
+            <label class="glossary-search-box" for="glossary-search"><span aria-hidden="true">⌕</span><input id="glossary-search" type="search" placeholder="Tafuta neno la kodi, mfano TIN, VAT, PAYE, EFD..." autocomplete="off"><button id="clear-glossary-search" data-action="clear-glossary-search" type="button" aria-label="Futa utafutaji">×</button></label>
+            <div class="glossary-alphabet-header"><span>Chuja kwa herufi</span><button data-action="clear-glossary-filters">Futa vichujio</button></div>
+            <div id="glossary-alphabet" class="glossary-alphabet" role="tablist" aria-label="Chuja maneno kwa herufi"></div>
+          </section>
+
+          <section id="glossary-featured" class="glossary-featured" aria-labelledby="glossary-featured-title"></section>
+
+          <section class="glossary-directory" aria-labelledby="glossary-directory-title">
+            <div class="glossary-section-heading"><div><span class="glossary-kicker">KAMUSI KAMILI</span><h2 id="glossary-directory-title">Maneno Yote ya Kodi</h2><p>Maana, mifano na vyanzo rasmi katika sehemu moja.</p></div></div>
+            <div id="glossary-list" class="glossary-grid"></div>
+            <div id="glossary-empty" class="glossary-empty hidden"><span aria-hidden="true">🔎</span><h3>Hakuna maneno yaliyopatikana.</h3><p>Jaribu kutumia neno lingine au ufupisho tofauti.</p><button data-action="clear-glossary-filters">Futa utafutaji</button></div>
+          </section>
+          <p class="glossary-disclaimer">Maana hizi ni kwa madhumuni ya elimu. Kwa taratibu na taarifa za sasa, tumia viungo vya vyanzo rasmi vya TRA.</p>
+        </div>
+      </section>
       <section id="learning-analytics-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="settings">‹ Mipangilio</button><div class="section-heading"><span class="mini-pill">DEMO ANALYTICS – MOCK DATA</span><h1>Hali ya kujifunza</h1><p>Takwimu hizi ni za mbele-end na zinaweza kutumia LocalStorage.</p></div><div id="learning-analytics" class="analytics-grid"></div></div></section>
       <section id="content-admin-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="settings">‹ Mipangilio</button><div class="section-heading"><span class="mini-pill">PROTOTYPE CONTENT MANAGEMENT</span><h1>Simamia somo</h1><p>Hifadhi mabadiliko ya mfano kwenye LocalStorage. Huu si mfumo wa uzalishaji.</p></div><label class="profile-form">Chagua somo<select id="admin-lesson-select"></select></label><div id="admin-lesson-editor" class="lesson-summary-card"></div></div></section>
       <section id="settings-screen" class="app-screen" aria-hidden="true"><div class="screen-pad compact"><button class="back-button" data-action="map">‹ Rudi</button><div class="section-heading"><span class="mini-pill">MAPENDEKEZO</span><h1>Mipangilio</h1></div><div class="settings-list"><label class="setting-row"><span><b>Sauti</b><small>Matukio ya sauti ya mchezo</small></span><input id="sound-setting" type="checkbox"><i></i></label><label class="setting-row"><span><b>Hali ya mwendo mdogo</b><small>Punguza animation kwa urahisi</small></span><input id="motion-setting" type="checkbox"><i></i></label><label class="setting-row"><span><b>Hali ya data kidogo</b><small>Epuka media za ziada</small></span><input id="data-setting" type="checkbox"><i></i></label></div><button class="danger-button" data-action="reset">Futa maendeleo</button><div class="about-link"><button class="ghost-button" data-action="about">Kuhusu Wazo →</button><button class="ghost-button" data-action="review-bank">Question Bank Review →</button><button class="ghost-button" data-action="analytics">Demo Analytics →</button><button class="ghost-button" data-action="content-admin">Prototype Content Management →</button></div></div></section>
